@@ -4,6 +4,7 @@ import Banner from "./components/Banner";
 import Models from "./components/Models";
 import NavBar from "./components/NavBar";
 import Cart from "./components/Cart";
+import Footer from "./components/Footer";
 
 const fetchModels = async () => {
   const res = await fetch("/models.json");
@@ -48,6 +49,8 @@ function App() {
       )}
 
       {activeTab === "cart" && <Cart carts={carts} setCarts={setCarts}></Cart>}
+
+      <Footer></Footer>
     </>
   );
 }
